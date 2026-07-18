@@ -1,0 +1,290 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --success-color: #27ae60;
+    --danger-color: #e74c3c;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: #f8f9fa;
+}
+
+.login-container, .dashboard-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.metric {
+    text-align: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    z-index: 1000;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-item i {
+    margin-right: 1rem;
+    color: var(--secondary-color);
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.alert.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .metrics {
+        grid-template-columns: 1fr;
+    }
+}
+/* Logout Screen Styles */
+.logout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8f9fa;
+}
+
+.logout-content {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+.logout-icon {
+    font-size: 4rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.logout-progress {
+    width: 100%;
+    height: 4px;
+    background: #eee;
+    margin: 1.5rem 0;
+    border-radius: 2px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background: #3498db;
+    animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+    from { width: 100% }
+    to { width: 0% }
+}
+
+#countdown {
+    font-weight: bold;
+    color: #3498db;
+}
+/* Password Recovery Specific Styles */
+.recovery-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.recovery-header h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.recovery-header p {
+    color: #7f8c8d;
+}
+
+.alert.success {
+    background-color: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+/* Form Adjustments */
+#recoveryForm .form-group {
+    margin-bottom: 1.5rem;
+}
+
+#recoveryForm select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: white;
+}
+/* Lecturer Dashboard Styles */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.course-item, .task-item, .announcement-item {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.schedule {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.quick-access .access-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.btn-icon:hover {
+    transform: translateY(-2px);
+    background: #3498db;
+    color: white;
+}
+
+.btn-icon i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.announcement-item small {
+    color: #666;
+    font-size: 0.8rem;
+}
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin: 1rem 0;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-height: 300px;
+}
+
+.notification-item {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
